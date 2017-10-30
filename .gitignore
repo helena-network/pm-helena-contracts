@@ -65,8 +65,5 @@ typings/
 # Truffle #
 ###########
 
-# build dir
-build/
-
 # local config
 truffle-local.js
