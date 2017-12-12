@@ -3,16 +3,16 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0xae8bebc0f51db662653a2dc9d0140a30daf428a2",
-      "updated_at": 1508792319212
+      "address": "0x31121512eebd5f45520901bacdbd2be4be89888f",
+      "updated_at": 1513105186951
     }
   },
   "Migrations": {
     "4": {
       "events": {},
       "links": {},
-      "address": "0x78cd66ef4588ce0e0e1e72eca877d042fd3f769a",
-      "updated_at": 1508792319217
+      "address": "0xdcd7364cf248f44deaf7a2290b35b63070369f49",
+      "updated_at": 1513105186956
     }
   },
   "OlympiaToken": {
@@ -81,10 +81,10 @@
         }
       },
       "links": {
-        "Math": "0xae8bebc0f51db662653a2dc9d0140a30daf428a2"
+        "Math": "0x31121512eebd5f45520901bacdbd2be4be89888f"
       },
-      "address": "0x72f80f429d8a8fbaf9e9f2f1baa1a3940c3beb8f",
-      "updated_at": 1508792319212
+      "address": "0x06512cb29148942f2cb5708fdb35213db60d608f",
+      "updated_at": 1513105186952
     }
   }
 }
