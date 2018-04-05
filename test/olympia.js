@@ -41,7 +41,7 @@ contract('OlympiaToken', function(accounts) {
 
 
     it('should declare itself to be a PlayToken', async () => {
-        assert.equal(await PlayToken.at(olympiaToken.address).isPlayToken(), true)
+        assert.equal(await olympiaToken.isPlayToken(), true)
     })
 })
 
