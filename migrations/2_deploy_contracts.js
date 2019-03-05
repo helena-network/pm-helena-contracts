@@ -1,17 +1,17 @@
-const OlympiaToken = artifacts.require('OlympiaToken')
+const Proton = artifacts.require('ProtonToken')
 const args = require('yargs').argv;
 
 module.exports = function(deployer) {
     deployer
-        .deploy(OlympiaToken)
+        .deploy(Proton)
         .then(
             deployedToken => {
                 if (args.admins) {
-                    return OlympiaToken.deployed().then(
-                        olympiaInstance => {
+                    return Proton.deployed().then(
+                        protonInstance => {
                             const admins = args.admins.split(',')
                             console.log("Adding admins...", admins)
-                            return olympiaInstance.addAdmin(admins)
+                            return protonInstance.addAdmin(admins)
                         }
                     )
                 }

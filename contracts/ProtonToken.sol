@@ -7,6 +7,6 @@ contract ProtonToken is PlayToken {
      *  Constants
      */
     string public constant name = "Proton";
-    string public constant symbol = "P+";
+    string public constant symbol = "xP+";
     uint8 public constant decimals = 18;
 }

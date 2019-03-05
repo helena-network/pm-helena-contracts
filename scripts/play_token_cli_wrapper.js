@@ -1,5 +1,5 @@
 const args = require('yargs').argv;
-const playTokenName = args.playTokenName || 'OlympiaToken'
+const playTokenName = args.playTokenName || 'ProtonToken'
 
 module.exports = (artifacts, fn) => async function(callback) {
   const PlayToken = artifacts.require(playTokenName)
