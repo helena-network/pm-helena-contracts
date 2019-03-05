@@ -5,13 +5,13 @@ Contracts related to Helena Network competitions. Helena uses a sidechain infras
 
 The mainnet **P+** token can be found here:
   - Mainnet:
-    - Address: `0x6427d856450b20f6fab88be18d949faf9c4da512`
-    - Creator: `0xcAb5bb0408C48780D38C452bE20E30da1A10e656`
+    - Address: [0xCFC64d8eAEB4E6a68860e415f55DFe9057dA7d2D]('https://etherscan.io/address/0xCFC64d8eAEB4E6a68860e415f55DFe9057dA7d2D#writeContract)
+    - Creator: `0x629573ad5A234A921628bF6BFD545949CA8b6eEd`
 
 This is the **xP+** token implementation:
   - xDai:
-    - Address: `0x979861df79c7408553aaf20c01cfb3f81ccf9341`
-    - Creator: `0xcAb5bb0408C48780D38C452bE20E30da1A10e656`
+    - Address: [0x10a6ea9cfccb215a2f7126a9f8ce57c039680f1f]('https://blockscout.com/poa/dai/address/0x10a6ea9cfccb215a2f7126a9f8ce57c039680f1f/transactions')
+    - Creator: `0x47e681cB751F80B9d5ac771Dfd4D0c7f85937289`
 
 
 # Contracts Overview
