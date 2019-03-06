@@ -1,5 +1,5 @@
 {
-  "name": "@gnosis.pm/pm-apollo-contracts",
+  "name": "@frontier-token-research/pm-apollo-contracts",
   "version": "1.4.1",
   "description": "A collection of contracts for Gnosis Apollo",
   "main": "index.js",
@@ -14,6 +14,7 @@
     "resetnetinfo": "truffle networks --clean && node scripts/inject_network_info.js",
     "prepublish": "truffle compile && truffle networks --clean && node scripts/inject_network_info.js",
     "issue-tokens": "truffle exec scripts/issue_tokens.js",
+    "burn-tokens": "truffle exec scripts/burn_tokens.js",
     "add-admins": "truffle exec scripts/add_admins.js",
     "remove-admins": "truffle exec scripts/remove_admins.js",
     "allow-transfers": "truffle exec scripts/allow_transfers.js",
@@ -38,6 +39,7 @@
   },
   "dependencies": {
     "@gnosis.pm/util-contracts": "^0.2.0",
+    "dotenv": "^6.2.0",
     "npm-prepublish": "^1.2.3",
     "yargs": "^11.0.0"
   }

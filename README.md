@@ -1,16 +1,18 @@
-# Gnosis Apollo Contracts
+# Helena Contracts
 
-This is a collection of contracts related to specifically to Gnosis Apollo. These contracts can be used in setting up prediction market tournaments like Olympia.
+Contracts related to Helena Network competitions. Helena uses a sidechain infrastructure, where different instance of tokens are deployed (same as Dai/xDai)
 
-This is the Olympia token contract implementation:
-  - Rinkeby:
-    - Address: `0x979861df79c7408553aaf20c01cfb3f81ccf9341`
-    - Creator: `0xcAb5bb0408C48780D38C452bE20E30da1A10e656`
 
-The mainnet address registry can be found:
-  - Rinkeby:
-    - Address: `0x6427d856450b20f6fab88be18d949faf9c4da512`
-    - Creator: `0xcAb5bb0408C48780D38C452bE20E30da1A10e656`
+The mainnet **P+** token can be found here:
+  - Mainnet:
+    - Address: [0xCFC64d8eAEB4E6a68860e415f55DFe9057dA7d2D]('https://etherscan.io/address/0xCFC64d8eAEB4E6a68860e415f55DFe9057dA7d2D#writeContract)
+    - Creator: `0x629573ad5A234A921628bF6BFD545949CA8b6eEd`
+
+This is the **xP+** token implementation:
+  - xDai:
+    - Address: [0x10a6ea9cfccb215a2f7126a9f8ce57c039680f1f]('https://blockscout.com/poa/dai/address/0x10a6ea9cfccb215a2f7126a9f8ce57c039680f1f/transactions')
+    - Creator: `0x47e681cB751F80B9d5ac771Dfd4D0c7f85937289`
+
 
 # Contracts Overview
 
@@ -22,7 +24,7 @@ The ability to issue new tokens to addresses, or minting tokens, is restricted t
 
 The creator of the contract instance is also required to specify accounts which will be administrators of this contract. The creator and these administrators are, in turn, required to specify a whitelist for token transfers. This prevents arbitrary transfers of token value from one account to another. PlayTokens can be transferred only to or from the whitelisted addresses. You may use this mechanic to ensure that users can only perform transactions with the token on authorized contracts in an event.
 
-## OlympiaToken
+## P+ Token
 
 Same as the PlayToken, except the optional [ERC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) fields `name`, `symbol`, and `decimals` have also been specified.
 
@@ -80,6 +82,16 @@ The deployer can use the following script to have each address in a list issued 
 
 ```sh
 npm run issue-tokens -- --amount <units of token> --to <comma separated addresses>
+```
+
+The `--amount` is expressed "in wei," or in the smallest units of the token. Thus, for most tokens, which have a `decimals` value of 18, one whole token would be expressed as `1e18` (scientific notation) of that token, e.g. `1e18 wei == 1 ether`.
+
+## Burn tokens
+
+In order to make possible bridges between networks, a burn function was created (only callable by admin), to be forwarded to the bridge:
+
+```sh
+npm run burn-tokens -- --amount <units of token> --to <comma separated addresses>
 ```
 
 The `--amount` is expressed "in wei," or in the smallest units of the token. Thus, for most tokens, which have a `decimals` value of 18, one whole token would be expressed as `1e18` (scientific notation) of that token, e.g. `1e18 wei == 1 ether`.
