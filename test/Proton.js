@@ -132,14 +132,12 @@ contract('PlayToken', function(accounts) {
 
     it('admins should be able to be specified during the migration', async () => {
         const nonAdminsNorCreator = accounts.slice(1).filter(account => admins.indexOf(account) === -1)
+        const admin = whitelisted1;
 
         await Promise.all(admins.map(
-            admin => playToken.allowTransfers(nonAdminsNorCreator, { from: owner })
+            admin => playToken.allowTransfers(nonAdminsNorCreator[0], { from: owner })
         ))
-
-        await Promise.all(nonAdminsNorCreator.map(
-            non => throwUnlessRejects(playToken.allowTransfers(nonAdminsNorCreator, { from: non }))
-        ))
+        await throwUnlessRejects(playToken.allowTransfers(nonAdminsNorCreator, { from: getter }))
     })
 })
 

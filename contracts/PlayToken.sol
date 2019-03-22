@@ -12,7 +12,7 @@ pragma solidity ^0.4.24;
 ///  implementation in case of any ambiguity into the standard
 
 
-import { ERC777ERC20BaseToken } from "./ERC777ERC20BaseToken.sol";
+import { ERC777ERC20BaseToken } from "./ERC777/ERC777ERC20BaseToken.sol";
 import { Ownable } from "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 
