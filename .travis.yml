@@ -2,8 +2,12 @@ language: node_js
 node_js:
 - '8'
 - 'node'
-before_script: 
+
+before_script:
+  - npm run start > ganache-unittest-logs.txt & 
   - truffle exec scripts/deployERC820.js
+script: 
+  - truffle test
 deploy:
   provider: npm
   email: carlos.buendia@helena.network
