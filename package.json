@@ -7,6 +7,7 @@
     "truffle": "truffle",
     "compile": "truffle compile",
     "migrate": "truffle migrate",
+    "start": "npm run start:testrpc",
     "start:testrpc": "ganache-cli -p 8545 -i 5777",
     "test": "run-with-testrpc -a 183 -d 'truffle test --admins=0x28a8746e75304c0780e011bed21c72cd78cd535e,0xaca94ef8bd5ffee41947b4585a84bda5a3d3da6e'",
     "networks": "truffle networks",
@@ -35,7 +36,7 @@
     "lodash": "^4.17.5",
     "run-with-testrpc": "^0.3.0",
     "truffle": "^4.1.14",
-    "ganache-cli": "^6.1.0",
+      "ganache-cli": "^6.1.0",
     "truffle-hdwallet-provider": "0.0.3"
   },
   "dependencies": {
