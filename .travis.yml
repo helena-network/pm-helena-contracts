@@ -5,7 +5,7 @@ node_js:
 
 before_script:
   - npm run start > ganache-unittest-logs.txt & 
-  - truffle exec scripts/deployERC820.js
+  - npm run pre-deploy
 script: 
   - truffle test
 deploy:
