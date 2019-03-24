@@ -2,6 +2,8 @@ language: node_js
 node_js:
 - '8'
 - 'node'
+before_install: 
+  - truffle exec scripts/deployERC820.js
 deploy:
   provider: npm
   email: carlos.buendia@helena.network
