@@ -2,12 +2,18 @@ language: node_js
 node_js:
 - '8'
 - 'node'
+
+before_script:
+  - npm run start > ganache-unittest-logs.txt & 
+  - npm run pre-deploy
+script: 
+  - truffle test
 deploy:
   provider: npm
-  email: denisgranha@gmail.com
+  email: carlos.buendia@helena.network
   api_key: $NPM_TOKEN
   on:
     all_branches: true
     tags: true
     node: '8'
-    repo: gnosis/pm-apollo-contracts
+    repo: frontier-token-research/pm-helena-contracts
