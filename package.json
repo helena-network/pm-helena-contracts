@@ -10,7 +10,7 @@
     "start": "npm run start:testrpc",
     "start:testrpc": "ganache-cli -p 8545 -i 5777",
     "pre-deploy": "truffle exec scripts/deploy_ERC820.js",
-    "test": "run-with-testrpc -a 183 -d 'truffle test --admins=0x28a8746e75304c0780e011bed21c72cd78cd535e,0xaca94ef8bd5ffee41947b4585a84bda5a3d3da6e'",
+    "test": "truffle test --admins=0x28a8746e75304c0780e011bed21c72cd78cd535e,0xaca94ef8bd5ffee41947b4585a84bda5a3d3da6e",
     "networks": "truffle networks",
     "injectnetinfo": "node scripts/inject_network_info.js",
     "extractnetinfo": "node scripts/extract_network_info.js",
